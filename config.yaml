@@ -1,0 +1,26 @@
+#spark parameters
+appName: "Partition Metrics"
+defaultKeyspace: "default keyspace"
+outputTable: "partition_metrics"
+outputKeyspace: "output keyspace"
+minPartSize: 104857600
+
+sparkConfigs:
+    spark.cores.max: "200"
+    spark.executor.memory: "8G"
+    spark.serializer: "org.apache.spark.serializer.KryoSerializer"
+    spark.cassandra.connection.host: "56.201.240.137,56.201.240.41,56.201.240.40,56.201.240.39,56.201.240.38,56.201.240.37,56.201.240.36,56.201.240.35,56.201.240.34,56.201.240.33,56.201.240.32,56.201.240.31,56.201.240.136,56.201.240.135,56.201.240.134,56.201.240.133,56.201.240.132,56.201.240.131,56.201.240.130,56.201.240.129,56.201.240.128,56.201.240.127,56.201.240.126,56.201.240.115,56.201.240.114,56.201.240.113,56.201.240.112,56.201.240.111,56.201.240.110,56.201.240.109,56.201.240.108,56.201.240.107,56.201.240.106,56.201.240.105,56.201.240.104,56.201.240.103,56.201.240.102,56.201.240.101,56.201.240.100,56.201.240.99,56.201.240.98,56.201.240.97,56.201.240.96,56.201.240.95,56.201.240.94,56.201.240.93,56.201.240.92,56.201.240.91,56.201.240.90,56.201.240.89,56.201.240.88,56.201.240.87,56.201.240.86,56.201.240.85,56.201.240.84,56.201.240.83,56.201.240.82,56.201.240.81,56.201.240.80,56.201.240.78,56.201.240.77,56.201.240.75,56.201.240.74,56.201.240.72,56.201.240.70,56.201.240.69,56.201.240.68,56.201.240.67,56.201.240.66,56.201.240.65,56.201.240.64,56.201.240.62,56.201.240.61,56.201.240.60,56.201.240.59,56.201.240.58,56.201.240.57,56.201.240.56,56.201.240.55,56.201.240.54,56.201.240.53,56.201.240.52,56.201.240.51,56.201.240.50,56.201.240.49,56.201.240.48,56.201.240.46,56.201.240.45,56.201.240.44,56.201.240.43,56.201.240.42,56.201.240.73,56.201.240.76"
+    spark.cassandra.auth.username: "user name"
+    spark.cassandra.auth.password: "password"
+    #spark.cassandra.connection.local_dc: "dc name" --use if there are multiple Data Centers
+    spark.cassandra.connection.keep_alive_ms: "180000"
+    spark.cassandra.input.consistency.level: "LOCAL_QUORUM"
+    spark.cassandra.output.consistency.level: "LOCAL_QUORUM"
+    spark.executor.extraJavaOptions: "-XX:+UseG1GC -XX:MaxGCPauseMillis=150 -XX:InitiatingHeapOccupancyPercent=35 -XX:G1ReservePercent=20 -XX:+UseStringDeduplication"
+    spark.driver.extraJavaOptions: "-XX:+UseG1GC -XX:MaxGCPauseMillis=150 -XX:InitiatingHeapOccupancyPercent=35 -XX:G1ReservePercent=20 -XX:+UseStringDeduplication"
+    spark.cassandra.query.retry.count: "5"
+    spark.cassandra.read.timeout_ms: "5000"
+    spark.io.compression.codec: "org.apache.spark.io.LZ4CompressionCodec"
+    spark.rdd.compress: "true"
+    spark.task.maxFailures: "2"
+    spark.akka.frameSize: "100"
