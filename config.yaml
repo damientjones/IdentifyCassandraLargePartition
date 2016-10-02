@@ -9,7 +9,7 @@ sparkConfigs:
     spark.cores.max: "200"
     spark.executor.memory: "8G"
     spark.serializer: "org.apache.spark.serializer.KryoSerializer"
-    spark.cassandra.connection.host: "localhost"
+    spark.cassandra.connection.host: "127.0.0.1"
     spark.cassandra.auth.username: "user name"
     spark.cassandra.auth.password: "password"
     #spark.cassandra.connection.local_dc: "dc name" --use if there are multiple Data Centers
